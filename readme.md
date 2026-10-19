@@ -1,18 +1,9 @@
-<table>
-<tr>
-<td width="140" valign="middle"><img src="photo-camille.jpg" alt="Photo de Camille Stanislawski" width="120"></td>
-<td valign="middle">
-
 # Camille STANISLAWSKI
 
 **Responsable Administrative et Financière (RAF) | Contrôle de gestion, trésorerie, reporting et pilotage de la performance**
 
 Cugnaux (31) - mobilité Toulouse | 06 67 57 71 71 | camille.stanis@hotmail.com
 Disponible immédiatement | Permis B, véhiculée
-
-</td>
-</tr>
-</table>
 
 ---
 
