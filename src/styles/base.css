@@ -1,0 +1,68 @@
+@layer reset, tokens, base, layouts, utilities;
+
+@layer reset {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  body,
+  p {
+    margin: 0;
+  }
+}
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+
+  body {
+    min-height: 100vh;
+    background: var(--color-page);
+    color: var(--color-text);
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    line-height: 1.55;
+  }
+
+  #outlet {
+    display: block;
+    padding: 0 0 3rem;
+  }
+
+  .noscript {
+    max-width: var(--content-width);
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
+  }
+
+  @media print {
+    html {
+      font-size: 9.5pt;
+    }
+
+    body {
+      background: #fff;
+      min-height: 0;
+    }
+
+    #outlet {
+      padding: 0;
+    }
+  }
+}
+
+@page {
+  size: A4;
+  margin: 13mm 14mm 14mm;
+}

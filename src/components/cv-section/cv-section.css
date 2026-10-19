@@ -1,0 +1,201 @@
+:host {
+  scroll-margin-top: calc(var(--nav-height) + 1rem);
+}
+
+section {
+  padding-top: 1.75rem;
+  margin-top: 1.75rem;
+  border-top: 1px solid var(--color-border);
+}
+
+h2 {
+  position: relative;
+  margin-bottom: 1.1rem;
+  padding-left: 0.85rem;
+  font-size: 1.3rem;
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--color-text);
+}
+
+h2::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.15em;
+  bottom: 0.15em;
+  width: 4px;
+  border-radius: 2px;
+  background: var(--color-accent);
+}
+
+p,
+li {
+  color: var(--color-text);
+}
+
+ul {
+  padding-left: 1.1rem;
+  list-style: none;
+}
+
+li {
+  position: relative;
+}
+
+li + li {
+  margin-top: 0.35rem;
+}
+
+li::before {
+  content: "";
+  position: absolute;
+  left: -0.95rem;
+  top: 0.62em;
+  width: 0.36em;
+  height: 0.36em;
+  border-radius: 50%;
+  background: var(--color-accent);
+}
+
+strong {
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 1.05rem;
+  line-height: 1.35;
+}
+
+.role {
+  font-weight: 700;
+}
+
+.org {
+  display: block;
+  color: var(--color-accent);
+  font-weight: 600;
+}
+
+.context {
+  margin-top: 0.15rem;
+  color: var(--color-muted);
+  font-size: 0.93rem;
+}
+
+.dates {
+  color: var(--color-muted);
+  font-size: 0.93rem;
+  font-weight: 600;
+}
+
+.dates span {
+  white-space: nowrap;
+}
+
+.entry-body > ul {
+  margin-top: 0.7rem;
+}
+
+.entries {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.entries--grid .entry {
+  padding: 1.1rem 1.2rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  background: var(--color-surface);
+}
+
+.entries--grid h3 {
+  margin-bottom: 0.6rem;
+}
+
+.entries--grid .entry-body > ul {
+  margin-top: 0;
+}
+
+.entries--timeline {
+  gap: 1.6rem;
+}
+
+.entry--dated {
+  display: grid;
+  gap: 0.25rem;
+}
+
+@media (min-width: 46em) {
+  .entries--grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .entry--dated {
+    grid-template-columns: 10.5rem minmax(0, 1fr);
+    gap: 1.5rem;
+  }
+
+  .dates {
+    padding-top: 0.15rem;
+  }
+}
+
+@media print {
+  section {
+    padding-top: 1rem;
+    margin-top: 1rem;
+  }
+
+  h2 {
+    margin-bottom: 0.7rem;
+  }
+
+  h2,
+  h3 {
+    break-after: avoid;
+  }
+
+  li,
+  p {
+    break-inside: avoid;
+  }
+
+  .entries--grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem 1.5rem;
+  }
+
+  .entries--grid .entry {
+    padding: 0;
+    border: 0;
+    background: none;
+  }
+
+  /* Block entries with floated dates split cleanly across printed pages. */
+  .entries--timeline,
+  .entry--dated {
+    display: block;
+  }
+
+  .entries--timeline > .entry + .entry {
+    margin-top: 1.1rem;
+  }
+
+  .entry--dated {
+    display: flow-root;
+  }
+
+  .dates {
+    float: left;
+    width: 8.5rem;
+  }
+
+  .entry--dated .entry-body {
+    margin-left: 9.5rem;
+  }
+
+  li + li {
+    margin-top: 0.2rem;
+  }
+}

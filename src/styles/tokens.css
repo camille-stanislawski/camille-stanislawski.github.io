@@ -1,0 +1,27 @@
+@layer tokens {
+  :root {
+    --color-page: #eef1f5;
+    --color-bg: #ffffff;
+    --color-surface: #f5f7fa;
+    --color-text: #18212d;
+    --color-muted: #566273;
+    --color-border: #dce1e8;
+    --color-accent: #1d4f7c;
+    --color-accent-strong: #143a5d;
+    --color-accent-soft: #e7eef6;
+
+    --font-sans: "Segoe UI", system-ui, -apple-system, Roboto, "Helvetica Neue", Arial, sans-serif;
+
+    --radius: 6px;
+    --content-width: 56rem;
+    --nav-row: 3.5rem;
+    --nav-links-row: 2.75rem;
+    --nav-height: calc(var(--nav-row) + var(--nav-links-row));
+  }
+
+  @media (min-width: 80em) {
+    :root {
+      --nav-height: 4rem;
+    }
+  }
+}
